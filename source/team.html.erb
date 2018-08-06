@@ -1,0 +1,18 @@
+---
+title: Le Wagon - Middleman - Team
+---
+
+<div id="team">
+  <div class="container">
+    <% data.teammates.each do |teammate| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="teammate">
+          <%= image_tag "images/#{teammate.github_nickname}.jpeg" %>
+          <h2><%= teammate.name %></h2>
+          <a href="https://github.com/<%=teammate.github_nickname%>" target="_blank"><i class="fab fa-github"></i> <%= teammate.github_nickname %></a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
